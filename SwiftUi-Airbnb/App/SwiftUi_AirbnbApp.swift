@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUi_AirbnbApp: App {
+    
+    let authManager = AuthManager(service: AuthService())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(authManager: authManager)
         }
     }
 }
